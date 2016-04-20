@@ -1,0 +1,59 @@
+*{
+	box-sizing:border-box;
+}
+
+body{
+	width:100%;
+	max-width:480px;
+	margin:auto;
+	font-family: sans-serif;
+}
+
+.chatForm{
+	padding-bottom:1em;
+	border-bottom: 1px solid #ccc;
+	padding-top:1em;
+	margin-top:1em;
+	border-top: 1px solid #ccc;
+}
+
+input[type="text"]{
+	width: 100%;
+	line-height: 1.3em;
+	padding:0.5em;
+	margin-bottom: 0.5em;
+}
+
+h1{
+	text-align: center;
+}
+
+.loginButtonHolder{
+	text-align: center;
+}
+
+.message{
+	padding:0.5em 0;
+	border-bottom:1px solid #F0F0F0;
+}
+
+.messageText{
+	margin-bottom:0.5em;
+}
+
+.messageMeta{
+	font-size:0.75em;
+	color:#999;
+}
+
+footer{
+	font-size: 0.88em;
+	margin:2em 0;
+	color:#999;
+	text-align: center;
+}
+
+footer img{
+	height: 2em;
+	vertical-align: middle;
+}

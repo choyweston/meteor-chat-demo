@@ -1,0 +1,42 @@
+<head>
+  <title>Chat Demo</title>
+</head>
+
+<body>
+  <header class="header">
+    <h1>Bienvenue aux TechnoDrinks!</h1>
+    <div class="loginButtonHolder">{{> loginButtons}}</div>
+  </header>
+
+  {{#if currentUser}}
+
+    {{>chatForm}}
+
+    {{>messageList}}
+
+  {{/if}}
+
+  <footer>Fait avec <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/2000px-Heart_coraz%C3%B3n.svg.png" alt=""> par l'équipe de <img src="http://www.classcraft.com/assets/images/logotype-sm.png"></footer>
+</body>
+
+<template name="messageList">
+  {{#if Template.subscriptionsReady}}
+    {{#each messages}}
+      <div class="message">
+        <div class="messageText">{{text}}</div>
+        <div class="messageMeta">{{authorName}} @ {{timestamp}}</div>
+      </div>
+    {{/each}}
+  {{else}}
+    <div class="message">
+      <div class="messageText">Loading...</div>
+    </div>
+  {{/if}}
+</template>
+
+<template name="chatForm">
+  <div class="chatForm">
+    <input type="text" id="chatBox">
+    <button type="button" class="btn btn-primary">Soumettre</button>
+  </div>
+</template>
